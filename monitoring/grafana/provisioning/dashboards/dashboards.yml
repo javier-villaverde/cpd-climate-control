@@ -1,0 +1,10 @@
+apiVersion: 1
+
+providers:
+  - name: TFG AC
+    type: file
+    disableDeletion: false
+    updateIntervalSeconds: 30
+    allowUiUpdates: true       # permite editar desde la UI sin perder el fichero
+    options:
+      path: /var/lib/grafana/dashboards

@@ -1,0 +1,24 @@
+global:
+  scrape_interval:     15s
+  evaluation_interval: 15s
+
+scrape_configs:
+
+  # API FastAPI — metricas del AC, LED, comandos IR
+  - job_name: "tfg_control_ac"
+    static_configs:
+      - targets: ["host.docker.internal:8000"]
+        labels:
+          servicio: "api_ac"
+
+  # Sensor de temperatura (cambia el host si el exporter corre en otro nodo)
+  - job_name: "sensores_temperatura_usb"
+    static_configs:
+      - targets: ["host.docker.internal:8001"]
+        labels:
+          servicio: "sensor_sala"
+
+  # Prometheus se monitoriza a si mismo
+  - job_name: "prometheus"
+    static_configs:
+      - targets: ["localhost:9090"]

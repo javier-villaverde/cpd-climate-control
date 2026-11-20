@@ -1,0 +1,7 @@
+fastapi
+uvicorn[standard]
+prometheus-client
+opencv-python
+numpy
+broadlink
+pydantic

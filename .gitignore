@@ -1,0 +1,13 @@
+# Datos de ejecucion y configuracion local (no subir)
+logs/
+images/
+debug_output/
+config/broadlink_config.json
+config/estado_ac.json
+.env
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
