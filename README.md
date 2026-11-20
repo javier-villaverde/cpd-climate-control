@@ -8,8 +8,6 @@ The air conditioner only has an infrared remote, so the system does three things
 - **Checks it** by reading the unit's indicator LED with a camera and computer vision, so a command is never trusted blindly.
 - **Monitors it** with Prometheus and Grafana: AC state, target temperature, cold and hot aisle temperatures read from USB sensors, and IR command activity.
 
-![LED detection on the camera frame](docs/img/led-detection-on.jpg)
-
 ## How it works
 
 ```mermaid
